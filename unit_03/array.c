@@ -1,13 +1,7 @@
 #include <stdio.h>
+#include "array.h"
 
 #define MAX 5
-
-void init(int*);
-void insert(int*, int pos, int num);
-void delete(int*, int pos);
-void reverse(int*);
-void search(int*, int num);
-void display(int*);
 
 int main() {
     int array[MAX];
