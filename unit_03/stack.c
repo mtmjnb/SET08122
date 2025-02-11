@@ -27,9 +27,9 @@ void main() {
 
     int *i = NULL;
 
-    for(int j=0; j<11; j++) {
+    for (int j=0; j<11; j++) {
         i = pop(&stack);
-        if(i) {
+        if (i) {
             printf("Item popped: %d\n", *i);
         }
     }
@@ -40,7 +40,7 @@ void init(struct stack *stack) {
 }
 
 void push(struct stack *stack, int item) {
-    if(stack->top == MAX-1) {
+    if (stack->top == MAX-1) {
         printf("Stack is full. Couldn't push '%d' onto stack\n", item);
         return;
     }
@@ -50,7 +50,7 @@ void push(struct stack *stack, int item) {
 
 int *pop(struct stack *stack) {
     int *data;
-    if(stack->top == -1) {
+    if (stack->top == -1) {
         printf("Stack is empty\n");
         return NULL;
     }

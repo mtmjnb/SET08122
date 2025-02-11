@@ -40,14 +40,14 @@ int main() {
 }
 
 void init(int *array) {
-    for(int i=0; i<MAX; i++) {
+    for (int i=0; i<MAX; i++) {
         array[i] = 0;
     }
 }
 
 void insert(int *array, int pos, int num) {
     int i;
-    for(i=MAX-1; i>pos; i--) {
+    for (i=MAX-1; i>pos; i--) {
         array[i] = array[i-1];
     }
     array[i] = num;
@@ -55,14 +55,14 @@ void insert(int *array, int pos, int num) {
 
 void delete(int *array, int pos) {
     int i;
-    for(i=pos; i<MAX-1; i++) {
+    for (i=pos; i<MAX-1; i++) {
         array[i] = array[i+1];
     }
     array[i] = 0;
 }
 
 void reverse(int *array) {
-    for(int i=0; i<MAX/2; i++) {
+    for (int i=0; i<MAX/2; i++) {
         int temp = array[i];
         array[i] = array[MAX-1-i];
         array[MAX-1-i] = temp;
@@ -71,23 +71,23 @@ void reverse(int *array) {
 
 void search(int *array, int num) {
     int i;
-    for(i=0; i<MAX; i++) {
-        if(array[i] == num) {
+    for (i=0; i<MAX; i++) {
+        if (array[i] == num) {
             printf("%d found in position %d\n", num, i);
             return;
         }
     }
-    if(i == MAX) {
+    if (i == MAX) {
         printf("%d not found in array\n", num);
     }
 }
 
 void display(int *array) {
-    for(int i=0; i<MAX; i++) {
+    for (int i=0; i<MAX; i++) {
         printf("%d\t", i);
     }
     printf("\n");
-    for(int i=0; i<MAX; i++) {
+    for (int i=0; i<MAX; i++) {
         printf("%d\t", array[i]);
     }
     printf("\n");
