@@ -12,9 +12,9 @@ int main() {
     printf("\n");
 
     // The Bubble Sort
-    for (int i=0; i<SIZE; i++) {
+    for (int i=0; i<SIZE-1; i++) {
         for (int target=0; target<(SIZE-1)-i; target++) {
-            if (array[target] > array [target+1]) {
+            if (array[target] > array[target+1]) {
                 int temp = array[target];
                 array[target] = array[target+1];
                 array[target+1] = temp;
